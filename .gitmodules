@@ -1,0 +1,3 @@
+[submodule "fetch-mcp"]
+	path = fetch-mcp
+	url = https://github.com/zcaceres/fetch-mcp.git
