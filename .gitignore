@@ -170,5 +170,5 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 
-# Generated HTML files
-girls_around_world.html
+# Generated files
+/generated/
