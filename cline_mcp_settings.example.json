@@ -1,0 +1,31 @@
+{
+  "mcpServers": {
+    "github.com/zcaceres/fetch-mcp": {
+      "command": "node",
+      "args": ["/path/to/fetch-mcp/dist/index.js"],
+      "disabled": false,
+      "autoApprove": []
+    },
+    "sqlite": {
+      "command": "node",
+      "args": ["/path/to/sqlite-server/build/index.js"],
+      "disabled": false,
+      "alwaysAllow": []
+    },
+    "github": {
+      "command": "node",
+      "args": ["/path/to/github-server/build/index.js"],
+      "disabled": false,
+      "alwaysAllow": []
+    },
+    "image-generator": {
+      "command": "node",
+      "args": ["/path/to/ai-image-gen-mcp/dist/server.js"],
+      "disabled": false,
+      "alwaysAllow": [],
+      "env": {
+        "REPLICATE_API_TOKEN": "<YOUR_REPLICATE_API_TOKEN>"
+      }
+    }
+  }
+}
