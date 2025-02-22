@@ -1,0 +1,27 @@
+{
+  "name": "flux-schnell-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for the Flux Schnell image generation model",
+  "main": "dist/server.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc && chmod +x dist/server.js",
+    "start": "node dist/server.js",
+    "dev": "tsc -w"
+  },
+  "keywords": [
+    "mcp",
+    "flux-schnell",
+    "image-generation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.1.0",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}
