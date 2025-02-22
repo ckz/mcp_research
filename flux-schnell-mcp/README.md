@@ -48,12 +48,12 @@ Generates images using the Flux Schnell model.
 Parameters:
 - `prompt` (required): Text prompt describing the desired image
 - `go_fast` (optional): Enable fast mode (default: true)
-- `megapixels` (optional): Image resolution in megapixels ('1', '2', '4') (default: '1')
+- `megapixels` (optional): Image resolution in megapixels ('1', '0.25') (default: '1')
 - `num_outputs` (optional): Number of images to generate (1-4) (default: 1)
 - `aspect_ratio` (optional): Image aspect ratio ('1:1', '4:3', '16:9') (default: '1:1')
 - `output_format` (optional): Output image format ('webp', 'png', 'jpeg') (default: 'webp')
 - `output_quality` (optional): Output image quality (1-100) (default: 80)
-- `num_inference_steps` (optional): Number of inference steps (4-20) (default: 4)
+- `num_inference_steps` (optional): Number of inference steps (1-4) (default: 4)
 
 Example usage:
 ```typescript

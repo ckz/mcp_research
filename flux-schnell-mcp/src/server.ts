@@ -20,7 +20,7 @@ if (!REPLICATE_API_TOKEN) {
 interface GenerateImageArgs {
   prompt: string;
   go_fast?: boolean;
-  megapixels?: '1' | '2' | '4';
+  megapixels?: '1' | '0.25';
   num_outputs?: number;
   aspect_ratio?: '1:1' | '4:3' | '16:9';
   output_format?: 'webp' | 'png' | 'jpeg';
@@ -34,7 +34,7 @@ function isGenerateImageArgs(obj: unknown): obj is GenerateImageArgs {
   
   if (typeof args.prompt !== 'string') return false;
   if (args.go_fast !== undefined && typeof args.go_fast !== 'boolean') return false;
-  if (args.megapixels !== undefined && !['1', '2', '4'].includes(args.megapixels as string)) return false;
+  if (args.megapixels !== undefined && !['1', '0.25'].includes(args.megapixels as string)) return false;
   if (args.num_outputs !== undefined && typeof args.num_outputs !== 'number') return false;
   if (args.aspect_ratio !== undefined && !['1:1', '4:3', '16:9'].includes(args.aspect_ratio as string)) return false;
   if (args.output_format !== undefined && !['webp', 'png', 'jpeg'].includes(args.output_format as string)) return false;
@@ -98,7 +98,7 @@ class FluxSchnellServer {
               },
               megapixels: {
                 type: 'string',
-                enum: ['1', '2', '4'],
+                enum: ['1', '0.25'],
                 description: 'Image resolution in megapixels'
               },
               num_outputs: {
@@ -126,7 +126,7 @@ class FluxSchnellServer {
               num_inference_steps: {
                 type: 'number',
                 minimum: 4,
-                maximum: 20,
+                maximum: 4,
                 description: 'Number of inference steps'
               }
             },
